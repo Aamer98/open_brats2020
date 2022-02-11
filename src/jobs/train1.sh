@@ -22,7 +22,7 @@ echo "------------------------------------< Data preparation>-------------------
 echo "Copying the source code"
 date +"%T"
 cd $SLURM_TMPDIR
-cp -r -f ~/scratch/open_brats2020 $SLURM_TMPDIR/
+cp -r -f ~/scratch/open_brats2020/src $SLURM_TMPDIR/
 
 echo "Copying the datasets"
 date +"%T"
