@@ -47,7 +47,7 @@ echo "---------------------------------------<Run the program>------------------
 date +"%T"
 cd $SLURM_TMPDIR
 
-cd src
+cd open_brats2020
 
 python -m src.train --devices 0 --width 48 --arch EquiUnet
 
@@ -57,5 +57,5 @@ date +"%T"
 echo "--------------------------------------<backup the result>-----------------------------------"
 date +"%T"
 cd $SLURM_TMPDIR
-cp -r $SLURM_TMPDIR/src ~/scratch/open_brats2020
+cp -r $SLURM_TMPDIR/open_brats2020 ~/scratch/
 
