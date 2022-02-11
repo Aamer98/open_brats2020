@@ -30,9 +30,10 @@ cp -r ~/scratch/Datasets/BRATS2020 .
 
 echo "creating data directories"
 date +"%T"
+
 cd BRATS2020
-unzip MICCAI_BraTS2020_TrainingData.zip
-unzip MICCAI_BraTS2020_ValidationData.zip
+unzip -q $SLURM_TMPDIR/MICCAI_BraTS2020_TrainingData.zip
+unzip -q $SLURM_TMPDIR/MICCAI_BraTS2020_ValidationData.zip
 
 
 
