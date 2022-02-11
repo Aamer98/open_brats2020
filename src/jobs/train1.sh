@@ -46,7 +46,7 @@ cd $SLURM_TMPDIR
 
 cd src
 
-python train.py --devices 0 --width 48 --arch Unet
+python -m src.train --devices 0 --width 48 --arch EquiUnet
 
 
 echo "-----------------------------------<End of run the program>---------------------------------"
