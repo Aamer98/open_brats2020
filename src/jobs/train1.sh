@@ -11,7 +11,7 @@
 #SBATCH --gres=gpu:1
 #SBATCH --ntasks-per-node=32
 #SBATCH --mem=127000M
-#SBATCH --time=0-00:30
+#SBATCH --time=0-00:10
 #SBATCH --account=rrg-ebrahimi
 
 nvidia-smi
@@ -22,7 +22,7 @@ echo "------------------------------------< Data preparation>-------------------
 echo "Copying the source code"
 date +"%T"
 cd $SLURM_TMPDIR
-cp -r ~/scratch/open_brats2020 .
+#cp -r ~/scratch/open_brats2020 .
 
 echo "Copying the datasets"
 date +"%T"
