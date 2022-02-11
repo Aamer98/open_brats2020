@@ -10,8 +10,8 @@
 #SBATCH --nodes=1
 #SBATCH --gres=gpu:1
 #SBATCH --ntasks-per-node=32
-#SBATCH --mem=127000M
-#SBATCH --time=0-00:10
+#SBATCH --mem=90000M
+#SBATCH --time=0-00:5
 #SBATCH --account=rrg-ebrahimi
 
 nvidia-smi
@@ -22,7 +22,6 @@ echo "------------------------------------< Data preparation>-------------------
 echo "Copying the source code"
 date +"%T"
 cd $SLURM_TMPDIR
-cp -r ~/scratch/open_brats2020/src .
 
 echo "Copying the datasets"
 date +"%T"
@@ -31,9 +30,11 @@ cp -r ~/scratch/Datasets/BRATS2020 .
 echo "creating data directories"
 date +"%T"
 
+
+
 cd BRATS2020
-unzip -q $SLURM_TMPDIR/MICCAI_BraTS2020_TrainingData.zip
-unzip -q $SLURM_TMPDIR/MICCAI_BraTS2020_ValidationData.zip
+unzip MICCAI_BraTS2020_TrainingData.zip
+unzip MICCAI_BraTS2020_ValidationData.zip
 
 
 
