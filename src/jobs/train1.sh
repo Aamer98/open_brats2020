@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --mail-user=your_email_id@gmail.com
+#SBATCH --mail-user=ar.aamer@gmail.com
 #SBATCH --mail-type=BEGIN
 #SBATCH --mail-type=END
 #SBATCH --mail-type=FAIL
