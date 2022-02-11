@@ -11,7 +11,7 @@
 #SBATCH --gres=gpu:1
 #SBATCH --ntasks-per-node=32
 #SBATCH --mem=90000M
-#SBATCH --time=0-00:5
+#SBATCH --time=1-00:00
 #SBATCH --account=rrg-ebrahimi
 
 nvidia-smi
@@ -47,9 +47,8 @@ echo "---------------------------------------<Run the program>------------------
 date +"%T"
 cd $SLURM_TMPDIR
 
-cd open_brats2020
 
-python -m src.train --devices 0 --width 48 --arch EquiUnet
+python -m src.train --devices 0 --width 48 --arch Unet
 
 
 echo "-----------------------------------<End of run the program>---------------------------------"
@@ -57,5 +56,8 @@ date +"%T"
 echo "--------------------------------------<backup the result>-----------------------------------"
 date +"%T"
 cd $SLURM_TMPDIR
-cp -r $SLURM_TMPDIR/open_brats2020 ~/scratch/
+rm -r -f BRATS2020
+mkdir ~/scratch/open_brats2020/rn_files
+mkdir ~/scratch/open_brats2020/rn_files/train1
+cp -r $SLURM_TMPDIR/ ~/scratch/open_brats2020/rn_files/train1/
 
