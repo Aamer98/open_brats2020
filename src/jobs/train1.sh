@@ -8,7 +8,7 @@
 #SBATCH --job-name=brats_train1
 #SBATCH --output=%x-%j.out
 #SBATCH --nodes=1
-#SBATCH --cpus-per-task=1
+#SBATCH --gres=gpu:1
 #SBATCH --ntasks-per-node=32
 #SBATCH --mem=127000M
 #SBATCH --time=0-00:10
