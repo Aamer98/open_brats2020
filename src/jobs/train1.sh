@@ -54,5 +54,5 @@ date +"%T"
 echo "--------------------------------------<backup the result>-----------------------------------"
 date +"%T"
 cd $SLURM_TMPDIR
-cp -r $SLURM_TMPDIR/open_brats2020 ~/scratch/
+cp -r $SLURM_TMPDIR/src ~/scratch/open_brats2020
 
