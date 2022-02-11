@@ -22,7 +22,7 @@ echo "------------------------------------< Data preparation>-------------------
 echo "Copying the source code"
 date +"%T"
 cd $SLURM_TMPDIR
-#cp -r ~/scratch/open_brats2020 .
+cp -r ~/scratch/open_brats2020/src .
 
 echo "Copying the datasets"
 date +"%T"
@@ -44,7 +44,7 @@ echo "---------------------------------------<Run the program>------------------
 date +"%T"
 cd $SLURM_TMPDIR
 
-cd open_brats2020
+cd src
 
 python -m src.train --devices 0 --width 48 --arch Unet
 

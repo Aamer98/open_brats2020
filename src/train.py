@@ -14,6 +14,16 @@ from ranger import Ranger
 from torch.cuda.amp import autocast, GradScaler
 from torch.utils.tensorboard import SummaryWriter
 
+import models
+from dataset import get_datasets
+from dataset.batch_utils import determinist_collate
+from loss import EDiceLoss
+from models import get_norm_layer, DataAugmenter
+from utils import save_args, AverageMeter, ProgressMeter, reload_ckpt, save_checkpoint, reload_ckpt_bis, \
+    count_parameters, WeightSWA, save_metrics, generate_segmentations
+
+
+'''
 from src import models
 from src.dataset import get_datasets
 from src.dataset.batch_utils import determinist_collate
@@ -21,6 +31,7 @@ from src.loss import EDiceLoss
 from src.models import get_norm_layer, DataAugmenter
 from src.utils import save_args, AverageMeter, ProgressMeter, reload_ckpt, save_checkpoint, reload_ckpt_bis, \
     count_parameters, WeightSWA, save_metrics, generate_segmentations
+'''
 
 parser = argparse.ArgumentParser(description='Brats Training')
 parser.add_argument('-a', '--arch', metavar='ARCH', default='Unet',
