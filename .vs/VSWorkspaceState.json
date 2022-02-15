@@ -3,8 +3,9 @@
     "",
     "\\src",
     "\\src\\jobs",
-    "\\src\\loss"
+    "\\src\\loss",
+    "\\src\\models"
   ],
-  "SelectedNode": "\\src\\jobs\\train1.sh",
+  "SelectedNode": "\\src\\config.py",
   "PreviewInSolutionExplorer": false
 }
